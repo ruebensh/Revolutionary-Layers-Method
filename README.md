@@ -59,16 +59,29 @@ graph TD
     style H fill:#44ff99,stroke:#333,stroke-width:2px
 ```
 
-## 📝 Worked Example: Passwords
+## 📝 Worked Example: A Startup Case Study
 
-1. **Normality Attack:** Everyone accepts typing a password as "normal," but it's a genuinely absurd user experience — a secret string that gets forgotten, reused, and phished.
-2. **Chesterton Filter:** The hidden function is *proof of identity*. That function is still needed — the specific mechanism (a memorized string) is what's disposable.
-3. **Root Cause Analysis:** Why passwords? → Because early systems needed a cheap, universal identity check → Why cheap? → Because hardware-based auth (keys, biometrics) was expensive and non-standard → Why non-standard? → Lack of a common protocol layer.
-4. **Ideal World Design:** Identity is proven by something you *are* or *have* (device, biometric, key), verified through a shared standard, with no secret to remember or leak.
-5. **Layer Selection:** This lives at the **Infrastructure** layer — a protocol other products build on (this is the WebAuthn/passkey thesis).
-6. **Incentive Map:** Password managers and legacy IT lose relevance; users and security teams win; platform holders (Apple, Google) gain leverage as the new trust layer.
-7. **Bridge Building:** MVP = passwordless login as an *option* alongside existing passwords, proving reliability before deprecating the old flow.
-8. **Litmus Test:** In 10 years, "I forgot my password" becomes a problem most users have simply never encountered.
+**The startup, before applying the method:** "TalentBoard" — a job-matching platform for IT talent. The pitch: yet another marketplace where companies post jobs and candidates upload a CV/resume to apply. Feature-wise it's competitive — filters, messaging, a slick UI — but structurally it's a thin layer sitting on top of the same CV-based hiring habit everyone already uses.
+
+**Why it's likely to fail as-is:**
+- No structural moat — LinkedIn, HH.uz, and dozens of local boards already do this; TalentBoard competes on marketing spend and UI polish, not on defensibility.
+- It never questions why CVs are used at all — it just makes uploading and filtering them slightly faster.
+- Growth depends on winning both sides of a two-sided market (candidates AND employers) simultaneously against entrenched incumbents — a classic cold-start problem with no unique wedge.
+
+**Running it through the 8 steps:**
+
+1. **Normality Attack:** Everyone treats the CV as the "normal" way to prove employability — but a self-written document is a genuinely weak, easily gamed signal of actual skill.
+2. **Chesterton Filter:** The hidden function of the CV is *risk reduction for the hiring manager* — a cheap way to filter thousands of applicants. That function is needed; the specific mechanism (self-reported history) is what's replaceable.
+3. **Root Cause Analysis:** Why CVs? → Because real skill verification (tests, live work samples) used to be slow and expensive at scale → Why expensive? → No shared infrastructure for standardized, verifiable skill assessment existed → Why none? → No single platform had enough volume across employers to make building one worthwhile.
+4. **Ideal World Design:** Hiring managers see a verified skill profile — based on completed tasks, peer/expert review, and real outcomes — instead of a self-written narrative.
+5. **Layer Selection:** Don't build "another job board" (Application layer). Build the **verification layer** — a skill-certification and portfolio-verification protocol that job boards, recruiters, and even LinkedIn could plug into.
+6. **Incentive Map:** Candidates without prestigious degrees or big-brand résumés win (skill becomes visible); good recruiters win (faster, more reliable signal); traditional CV-screening agencies and keyword-matching ATS vendors lose relevance; incumbent boards may resist integrating a layer that reduces their own data lock-in.
+7. **Bridge Building:** MVP isn't a full marketplace — it's a verification badge and skill-assessment API piloted with 3–5 companies' existing hiring pipelines, proving the signal is more predictive than a CV before building anything else.
+8. **Litmus Test:** In 10 years, "attach your CV" stops being the first question in any hiring flow.
+
+**What changes after the method:** TalentBoard-as-a-job-board has a narrow, saturated market and no defensible position — the most likely outcome is a slow bleed against better-funded competitors. TalentBoard-as-a-verification-layer has a genuinely different value proposition: it doesn't compete with job boards, it becomes infrastructure *underneath* them. That's a smaller, harder first step to build, but a structurally more promising one — the kind of position a well-funded competitor can't simply out-market.
+
+That's the point of the method: it doesn't guarantee success, but it moves the bet from "can we out-execute in a crowded market" to "did we correctly identify a lower, more defensible layer to build on."
 
 ## ⚠️ Limitations
 

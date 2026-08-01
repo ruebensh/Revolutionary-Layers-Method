@@ -57,16 +57,29 @@ graph TD
     style H fill:#44ff99,stroke:#333,stroke-width:2px
 ```
 
-## 📝 Amaliy Misol: Parollar
+## 📝 Amaliy Misol: Startap Case Study
 
-1. **Normality Attack:** Hamma parol kiritishni "normal" deb qabul qiladi, lekin bu haqiqatan ham absurd tajriba — unutiladigan, qayta ishlatiladigan va fishing qilinadigan maxfiy satr.
-2. **Chesterton Filtri:** Yashirin funksiya — *shaxsni tasdiqlash*. Bu funksiya hali ham kerak — mexanizmning o'zi (yodda saqlanadigan satr) esa keraksiz.
-3. **Ildiz Sabab Tahlili:** Nega parollar? → Chunki dastlabki tizimlarga arzon, universal identifikatsiya kerak edi → Nega arzon? → Chunki apparat asosidagi autentifikatsiya (kalitlar, biometriya) qimmat va standart emas edi → Nega standart emas? → Umumiy protokol qatlami yo'q edi.
-4. **Ideal Dunyo Tasviri:** Shaxs siz *kimligingiz* yoki *egaligingiz* (qurilma, biometriya, kalit) orqali, umumiy standart bilan tasdiqlanadi, yodda saqlanadigan yoki chiqib ketishi mumkin bo'lgan maxfiylik yo'q.
-5. **Qatlamni Tanlash:** Bu **Infratuzilma** qatlamida joylashadi — boshqa mahsulotlar tayanadigan protokol (bu WebAuthn/passkey g'oyasi).
-6. **Incentive Xaritasi:** Parol menejerlari va eski IT ahamiyatini yo'qotadi; foydalanuvchilar va xavfsizlik jamoalari yutadi; platforma egalari (Apple, Google) yangi ishonch qatlami sifatida kuch oladi.
-7. **Ko'prik Qurish:** MVP = parolsiz kirishni eski parol bilan bir qatorda *tanlov* sifatida taklif qilish, eski oqimni bekor qilishdan oldin ishonchliligini isbotlash.
-8. **Lakmus Testi:** 10 yildan keyin "parolimni unutdim" ko'pchilik foydalanuvchi hech qachon uchramaydigan muammoga aylanadi.
+**Metodsiz startap:** "TalentBoard" — IT mutaxassislar uchun ish qidirish platformasi. G'oya: kompaniyalar ish e'lonini joylaydi, nomzodlar CV/rezyume yuklab ariza beradi — yana bitta marketpleys. Funksional jihatdan raqobatbardosh — filtrlar, xabar almashish, chiroyli interfeys — lekin tuzilishi jihatidan bu hammaning ishlatayotgan CV-asosidagi yollash odatining ustiga qo'yilgan yupqa qatlam, xolos.
+
+**Nega u hozirgi holida muvaffaqiyatsizlikka uchrashi mumkin:**
+- Strukturaviy himoya yo'q — LinkedIn, HH.uz va o'nlab mahalliy platformalar buni allaqachon qilyapti; TalentBoard marketing xarajati va interfeys bilan raqobatlashadi, himoyalanuvchan ustunlik bilan emas.
+- U CV nima uchun ishlatilayotganini hech qachon so'ramaydi — u shunchaki yuklash va filtrlashni bir oz tezlashtiradi.
+- O'sish ikki tomonlama bozorning (nomzodlar VA ish beruvchilar) ikkisini bir vaqtda, mustahkam o'rnashib olgan raqobatchilarga qarshi yutishga bog'liq — noyob "wedge" (kirish nuqtasi)siz klassik cold-start muammosi.
+
+**8 bosqichdan o'tkazish:**
+
+1. **Normality Attack:** Hamma CV'ni bandlikka layoqatni isbotlashning "normal" yo'li deb hisoblaydi — lekin o'zi yozgan hujjat haqiqiy ko'nikmaning zaif va oson soxtalashtiriladigan signali, xolos.
+2. **Chesterton Filtri:** CV'ning yashirin funksiyasi — *ish beruvchi uchun xavfni kamaytirish* — minglab arizachini arzon filtrlash yo'li. Bu funksiya kerak; mexanizmning o'zi (o'z-o'zidan yozilgan tarix) esa almashtirilishi mumkin.
+3. **Ildiz Sabab Tahlili:** Nega CV? → Chunki haqiqiy ko'nikma tekshiruvi (testlar, real ish namunalari) katta miqyosda sekin va qimmat edi → Nega qimmat? → Standartlashtirilgan, tekshiriladigan ko'nikma baholash uchun umumiy infratuzilma yo'q edi → Nega yo'q? → Hech bir platformada barcha ish beruvchilar bo'ylab buni qurishga arziydigan hajm yo'q edi.
+4. **Ideal Dunyo Tasviri:** Ish beruvchi o'z-o'zidan yozilgan hikoya o'rniga, bajarilgan vazifalar, ekspert baholovi va real natijalarga asoslangan tekshirilgan ko'nikma profilini ko'radi.
+5. **Qatlamni Tanlash:** "Yana bitta ish qidirish platformasi" (Application qatlami) qurmang. **Tekshirish qatlami**ni quring — boshqa ish platformalari, recruiter'lar, hattoki LinkedIn ham ulanishi mumkin bo'lgan ko'nikma-sertifikatlash protokoli.
+6. **Incentive Xaritasi:** Obro'li diplomasiz yoki katta brend tajribasiz nomzodlar yutadi (ko'nikma ko'rinadigan bo'ladi); yaxshi recruiter'lar yutadi (tezroq, ishonchli signal); an'anaviy CV-skrining agentliklari va kalit so'z bo'yicha mos keladigan ATS'lar ahamiyatini yo'qotadi; mavjud platformalar o'z ma'lumot monopoliyasini kamaytiradigan qatlamni integratsiya qilishga qarshilik ko'rsatishi mumkin.
+7. **Ko'prik Qurish:** MVP to'liq marketpleys emas — bu 3–5 kompaniyaning mavjud yollash jarayoniga sinov sifatida joriy qilingan tekshirish belgisi va ko'nikma-baholash API'si, boshqa hech narsa qurishdan oldin signal CV'dan ko'ra ko'proq bashorat qiluvchi ekanligini isbotlash.
+8. **Lakmus Testi:** 10 yildan keyin "CV'ingizni biriktiring" har qanday yollash jarayonidagi birinchi savol bo'lishdan to'xtaydi.
+
+**Metoddan keyin nima o'zgaradi:** TalentBoard-ish-platformasi-sifatida tor va to'yingan bozorga ega va himoyalanuvchan pozitsiyasi yo'q — eng ehtimolli natija — yaxshi moliyalashtirilgan raqobatchilar oldida sekin so'nib borish. TalentBoard-tekshirish-qatlami-sifatida esa haqiqatan boshqacha qiymat taklifiga ega: u ish platformalari bilan raqobatlashmaydi, ularning *ostida* infratuzilmaga aylanadi. Bu kichikroq va qurish qiyinroq birinchi qadam, lekin strukturaviy jihatdan ancha istiqbolli — yaxshi moliyalashtirilgan raqobatchi uchun uni shunchaki marketing bilan yutib bo'lmaydigan pozitsiya.
+
+Metodning maqsadi shunda: u muvaffaqiyatni kafolatlamaydi, lekin garovni "to'yingan bozorda kim yaxshiroq ijro etadi"dan "biz to'g'ri, ancha himoyalanuvchan qatlamni to'g'ri aniqladikmi"ga ko'chiradi.
 
 ## ⚠️ Cheklovlar
 
