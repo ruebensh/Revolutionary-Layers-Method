@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/logo.png" alt="Логотип метода революционных слоёв" width="180"/>
+</p>
+
 # Метод Революционных Слоев (Инверсия Экосистемы)
 
 **Автор:** Джалолиддин ([xalimov.vercel.app](https://xalimov.vercel.app))

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/logo.png" alt="Inqilobiy Qatlamlar Metodi logotipi" width="180"/>
+</p>
+
 # Inqilobiy Qatlamlar Metodi (Revolutionary Layers Method)
 
 **Muallif:** Jaloliddin ([xalimov.vercel.app](https://xalimov.vercel.app))

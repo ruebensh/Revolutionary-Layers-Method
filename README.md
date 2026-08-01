@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/logo.png" alt="Revolutionary Layers Method logo" width="180"/>
+</p>
+
 # Revolutionary Layers Method (Ecosystem Inversion)
 
 **Author:** Jaloliddin ([xalimov.vercel.app](https://xalimov.vercel.app))
